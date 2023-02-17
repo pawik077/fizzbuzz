@@ -2,10 +2,10 @@ TARGET=.
 OBJ=./obj
 FLAGS=-f elf64
 
-__start__: $(TARGET)/hello
+__start__: $(TARGET)/fizzbuzz
 	$(TARGET)/fizzbuzz
 
-$(TARGET)/hello: $(OBJ)/fizzbuzz.o
+$(TARGET)/fizzbuzz: $(OBJ)/fizzbuzz.o
 	ld -o $(TARGET)/fizzbuzz $(OBJ)/fizzbuzz.o
 
 $(OBJ):
